@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Roadtrippr</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1 class= "text-center">Roadtrippr</h1>
+    <p class= "text-center">Welcome to Roadtrippr</p>
 
 
-    <form action="/" method="post">
-      <input type="text" name="search[destination]">
-      <input type="submit" value="Search">
+  <img src="http://static1.squarespace.com/static/540df5b7e4b0b38308b4af53/t/577554326a4963c15316acd7/1465325479644/SKY.jpg" alt="Mountain View" style="width:1140px;height:760px;" class="img-responsive">
+
+  <div class="container text-center">
+    <form>
+      <div class="form-group">
+        <label for="startLocation">Start location:</label>
+        <input type="text" class="form-control" placeholder="Enter start location">
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination:</label>
+        <input type="text" class="form-control"placeholder="Enter destination">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
     </form>
   </body>
 </html>
