@@ -23,5 +23,28 @@ label {
 
 .alert {
   width:50%;
-  margin-top: 30%;
+  margin-top: 8%;
+  border: 1px solid black;
+}
+
+#search-box{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+.space-4 {
+    margin-top: 250px;
+}
+
+.text-contrast {
+    color: #fff;
+}
+
+.h4 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.1;
 }
