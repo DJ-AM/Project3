@@ -1,8 +1,7 @@
 var Search = require('../models/Search');
 
  module.exports = {
-   index: index,
-   create: create
+   index: index
  }
 
  function index(req, res, next){

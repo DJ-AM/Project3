@@ -3,23 +3,24 @@ var router   = express.Router();
 var passport = require('passport');
 var searchController = require('../controllers/search');
 var ForecastIo = require('forecastio');
-var forecastIo = new ForecastIo(process.env.WEATHER_KEY, {timeout: 30*1000});
-forecastIo.forecast('51.506', '0.127').then(function(data) {
-  console.log(JSON.stringify(data, null, 2));
-});
 
-var options = {
-  units: 'si',
-  exclude: 'currently,hourly,flags'
-};
-forecastIo.forecast('49.844', '24.028', options).then(function(data) {
-  console.log(JSON.stringify(data, null, 2));
-});
+// var forecastIo = new ForecastIo(process.env.WEATHER_KEY, {timeout: 30*1000});
+// forecastIo.forecast('51.506', '0.127').then(function(data) {
+//   console.log(JSON.stringify(data, null, 2));
+// });
+//
+// var options = {
+//   units: 'si',
+//   exclude: 'currently,hourly,flags'
+// };
+// forecastIo.forecast('49.844', '24.028', options).then(function(data) {
+//   console.log(JSON.stringify(data, null, 2));
+// });
+
 
 
 router.route('/api/search')
-  .get(searchController.index)
-  .post(searchController.create);
+  .get(searchController.index);
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Roadtrippr', user: req.user });
@@ -35,7 +36,7 @@ router.post('/', function(req, res, next) {
   var startingLoc = req.body.startingLoc;
   var hiddenLocation = req.body.hiddenLocation;
   var Search = require('../models/Search');
-    console.log('storing a new search!');
+  console.log('storing a new search!');
   var newSearch = new Search();
   newSearch.starting_point = startingLoc;
   newSearch.destination = destination;
@@ -43,11 +44,11 @@ router.post('/', function(req, res, next) {
   newSearch.save(function(err, savedSearch) {
     if(err) next (err);
   });
-  if (startingLoc) {
-    res.send('<iframe style="border-style:none;" width="70%" height="70%" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD_yzTWnGjID6IUWj9PF9IVhIFwYtCp_fM&origin=' + startingLoc + '&destination=' + destination + '"></iframe>')
-  } else {
-    res.send('<iframe width="70%" height="70%" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD_yzTWnGjID6IUWj9PF9IVhIFwYtCp_fM&origin=' + hiddenLocation + '&destination=' + destination + '"></iframe>')
-  }
+  res.redirect('searchresults')
+})
+
+router.get('/searchresults', function(req, res, next) {
+  res.render('pages/searchresults', { title: 'About Roadtrippr', user: req.user })
 })
 
 
