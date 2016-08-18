@@ -26,6 +26,7 @@
 
     <%- include ../partials/scripts %>
 
+
     <div id='Sinfo'>
       <div id='Slocation'>Starting Point</div>
       <ul>
@@ -42,8 +43,7 @@
         <li id="Dwind"></li>
       </ul>
     </div>
-    <button id="seeWeatherstart">Show Weather at starting point!</button>
-    <button id="seeWeatherdest">Show Weather at destination!</button>
+    <button id="seeWeatherdest">Show Weather!</button>
 
 
     <div class='forecast'></div>
@@ -71,7 +71,8 @@
     var destination = <%- JSON.stringify(destination) %>
     var startingLoc = <%- JSON.stringify(startingLoc) %>
     </script>
-    
+
+
     <script src="javascript/googlemaps.js"></script>
     <script src="javascript/forecast.js"></script>
   </body>

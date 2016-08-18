@@ -1,14 +1,6 @@
 $(document).ready(function($) {
   $('#seeWeatherdest').on('click', function(){
     // http://stackoverflow.com/questions/35383686/skycons-dark-sky-forecast-api-displaying-animated-icons-for-dynamically-created
-    // var city      = geoplugin_city();
-    // var startlongitude = $longitude;
-    // var startlatitude  = $latitude;
-
-    // data counter retrived from a .each()
-    // var counter = 0;
-
-    // $('#location').append(city);
 
     function findWindDirection(dir) {
       var key    = ['N','S','W','E','NW','NE','SW','SE'];
@@ -55,17 +47,6 @@ $(document).ready(function($) {
         }
       }
     })
-  })
-  $('#seeWeatherstart').on('click', function(){
-    // http://stackoverflow.com/questions/35383686/skycons-dark-sky-forecast-api-displaying-animated-icons-for-dynamically-created
-    // var city      = geoplugin_city();
-    // var startlongitude = $longitude;
-    // var startlatitude  = $latitude;
-
-    // data counter retrived from a .each()
-    // var counter = 0;
-
-    // $('#location').append(city);
 
     function findWindDirection(dir) {
       var key    = ['N','S','W','E','NW','NE','SW','SE'];
@@ -73,7 +54,7 @@ $(document).ready(function($) {
       return key[select];
     }
 
-    var apiKey = '76a0b6639f56ec09d980a92471acf6cb';
+    // var apiKey = '76a0b6639f56ec09d980a92471acf6cb';
     var apiURL = 'https://api.forecast.io/forecast/' + apiKey + '/' + $sLatitude + ',' + $sLongitude;
 
     $.ajax({
@@ -112,5 +93,7 @@ $(document).ready(function($) {
         }
       }
     })
-  })
+    $('#seeWeatherdest').addClass('hidden')
+})
+
 })
