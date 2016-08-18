@@ -54,6 +54,17 @@ label {
   width: 500px;
 }
 
+/* code for moving car on about page */
+body {
+    overflow-x: hidden;
+}
+.car-right-image {
+    position: absolute;
+    margin-top: 300px;
+    width: 260px;
+    left: -260px;
+}
+
 .float-my-children > * {
     float:left;
     margin-right:5px;

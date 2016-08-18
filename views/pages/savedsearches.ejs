@@ -11,20 +11,21 @@
     <div class="container">
 
       <h1>Saved Searches</h1>
-        <table class="table table-hover">
+        <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
               <th>Starting Point</th>
               <th>Destination</th>
             </tr>
             </thead>
-          <tbody id="start">
+          <tbody id="start" data-link="row" class="rowlink">
           </tbody>
         </table>
     </div>
 
     <%- include ../partials/scripts %>
     <script src="/javascript/savedsearches.js"></script>
+
   </body>
 
 </html>
