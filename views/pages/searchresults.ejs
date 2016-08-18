@@ -2,10 +2,10 @@
 <html>
   <head>
     <%- include ../partials/head %>
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
     <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
   </head>
   <body>
-    <%- include ../partials/nav %>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -14,10 +14,30 @@
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+    <%- include ../partials/header %>
+    <%- include ../partials/nav %>
+
 
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_yzTWnGjID6IUWj9PF9IVhIFwYtCp_fM"></script>
     <div class="clearfix float-my-children">
+    <div id="map"></div>
+    <div id='Sinfo'>
+      <div id='Slocation'></div>
+      <ul style="list-style-type:none">Starting Point Weather
+        <li id="Scondition"></li>
+        <li id="Stemp"></li>
+        <li id="Swind"></li>
+      </ul>
+      <ul style="list-style-type:none">Mid Point Weather
+        <li id="Mcondition"></li>
+        <li id="Mtemp"></li>
+        <li id="Mwind"></li>
+    </ul>
+        <ul style="list-style-type:none">Destination Point Weather
+          <li id="Dcondition"></li>
+          <li id="Dtemp"></li>
+          <li id="Dwind"></li>
       <div id="map"></div>
       <div id='Sinfo'>
         <div id='Slocation'></div>
@@ -40,7 +60,15 @@
       <br>
       <br>
     </div>
-
+    <%# <div id='Dlocation'>Destination Point Weather</div>%>
+    <%# <ul>
+      <li id="Dcondition"></li>
+      <li id="Dtemp"></li>
+      <li id="Dwind"></li>
+    </ul>%>
+  <br>
+  <br>
+  </div>
     <div class="fb-comments" data-href="https://djam-roadtrippr.herokuapp.com/searchresults" data-numposts="5"></div>
 
     <%- include ../partials/scripts %>
