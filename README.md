@@ -32,6 +32,8 @@ ENJOY ;)
 ###The inception deck:
 https://docs.google.com/presentation/d/1pfK_G4ROs49BNh2VuZBECpMvvFfqF6ykrz1tf3_xGDk/edit?usp=sharing
 
+Note: The wireframes and ERD are located within the inception deck. Check it out!
+
 ###Technologies used:
 HTML, CSS, Javascript, JQuery, Node.js, Express, MongoDB, Google Maps API, Google OAuth, forecast.io API, Facebook comments, ATOM, Github.
 
