@@ -4,9 +4,11 @@
     <%- include ./partials/head %>
   </head>
   <body>
-    <%- include ./partials/nav %>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
+    <%- include ./partials/nav %>
     <div class="container-fluid backgrnd">
+      <canvas id="FrontTitle" width=630></canvas>
       <div class="h4 text-contrast space-4">
         <h4 class="cover-heading text-center">Find things to do along your road trip</h4>
       </div>
@@ -26,6 +28,7 @@
     </div>
 
     <%- include ./partials/scripts %>
+    <script src="/javascript/animate.js"></script>
 
   </body>
 </html>
