@@ -55,7 +55,6 @@ label {
 #map {
   height: 500px;
   width: 80%;
-  padding: 100px;
 }
 
 /* code for moving car on about page */
@@ -121,4 +120,8 @@ body {
   align-items: center;
   margin-top: 120px;
   margin-left: 23%;
+}
+
+#Sinfo {
+  float: right;
 }
