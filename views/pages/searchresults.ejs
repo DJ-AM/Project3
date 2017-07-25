@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ../partials/head %>
+    <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+  </head>
+  <body>
+    <%- include ../partials/nav %>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEZP2uMrTFOCerjNUtXPkOtAadFadKQDM"></script>
+    <div class="clearfix float-my-children">
+      <div id="map"></div>
+        <div id='Sinfo'>
+          <div id='Slocation'></div>
+            <ul style="list-style-type:none" class="weather"><img class="markers" src="https://i.imgur.com/zKXnVGa.png"><%= startingLoc %> Weather
+              <li id="Scondition"></li>
+              <li id="Stemp"></li>
+              <li id="Swind"></li>
+            </ul>
+            <ul style="list-style-type:none" class="weather"><img class="markers" src="https://i.imgur.com/fKuftnL.png"> Mid Point Weather
+              <li id="Mcondition"></li>
+              <li id="Mtemp"></li>
+              <li id="Mwind"></li>
+            </ul>
+              <ul style="list-style-type:none" class="weather"><img class="markers" src="https://i.imgur.com/P2rQQfz.png"><%= destination %> Weather
+                <li id="Dcondition"></li>
+                <li id="Dtemp"></li>
+                <li id="Dwind"></li>
+            </ul>
+          </div>
+        <br>
+        <br>
+      </div>
+
+    <%- include ../partials/scripts %>
+
+
+
+
+    <div class='forecast'></div>
+    <script>
+       var icons = new Skycons({"color": "black"}),
+             list  = [
+               "clear-day", "clear-night", "partly-cloudy-day",
+               "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+               "fog"
+             ],
+             i;
+
+         for(i = list.length; i--; ) {
+       var weatherType = list[i],
+           elements = document.getElementsByClassName( weatherType );
+       for (e = elements.length; e--;){
+           icons.set( elements[e], weatherType );
+       }
+    }
+
+         icons.play();
+    </script>
+
+    <script>
+    var destination = <%- JSON.stringify(destination) %>
+    var startingLoc = <%- JSON.stringify(startingLoc) %>
+    </script>
+
+    <script src="javascript/googlemaps.js"></script>
+  </body>
+</html>

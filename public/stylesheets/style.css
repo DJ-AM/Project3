@@ -1,0 +1,127 @@
+@import 'https://fonts.googleapis.com/css?family=Pacifico';
+@import 'https://fonts.googleapis.com/css?family=Permanent+Marker';
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body{
+  height: 100%;
+}
+
+.backgrnd {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('https://www.theplunge.com/images/new_articles/road_trip/roadtrip.jpg');
+  background-size: cover;
+}
+
+label {
+  color: white;
+}
+
+.alert {
+  width:50%;
+  margin-top: 8%;
+  border: 1px solid black;
+}
+
+#search-box{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+.space-4 {
+    margin-top: 250px;
+}
+
+.text-contrast {
+    color: #fff;
+}
+
+.h4 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+#map {
+  height: 500px;
+  width: 80%;
+}
+
+/* code for moving car on about page */
+body {
+    overflow-x: hidden;
+}
+.car-right-image {
+    position: absolute;
+    margin-top: 300px;
+    width: 260px;
+    left: -260px;
+}
+/* end car stuff*/
+
+.float-my-children > * {
+    float:left;
+    margin-right:5px;
+}
+
+.clearfix {
+    *zoom:1 /* for IE */
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.markers {
+  height: 15%;
+  width: 15%;
+}
+
+.weather {
+  background-color: beige;
+   border-width:1px;
+   border-style:solid;
+   border-bottom-color:#aaa;
+   border-right-color:#aaa;
+   border-top-color:#ddd;
+   border-left-color:#ddd;
+   border-radius:3px;
+}
+
+.fb-comments {
+  margin-top: 50px;
+}
+
+#map {
+  background-image: url(https://vignette2.wikia.nocookie.net/dragonball/images/3/3a/Super_saiyan_goten_vs_super_saiyan_trunks.gif/revision/latest?cb=20111230210709);
+  background-size: 450px 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#FrontTitle {
+  position: inherit;
+  align-items: center;
+  margin-top: 120px;
+  margin-left: 23%;
+}
+
+#Sinfo {
+  float: right;
+}

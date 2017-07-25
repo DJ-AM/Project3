@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ../partials/head %>
+  </head>
+  <body>
+    <%- include ../partials/nav %>
+
+    <!-- hidden div to make it so the back end can pull the id of the current user! Mike is awesome -->
+    <div class='hidden-id' id='<%= user? user._id : '' %>'></div>
+
+    <div class="container">
+
+      <h1>Saved Searches</h1>
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Starting Point</th>
+              <th>Destination</th>
+            </tr>
+            </thead>
+          <tbody id="start" data-link="row" class="rowlink">
+          </tbody>
+        </table>
+    </div>
+
+    <%- include ../partials/scripts %>
+    <script src="/javascript/savedsearches.js"></script>
+
+  </body>
+</html>
